@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type='image/x-icon' href="img/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Google Api-->
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/promotion.css">
+    <style>
+        #side-logo {
+            width: 100%;
+        }
+    </style>
+    <title>ClearWater</title>
+</head>
+
+<body class="col-12 col-sm-6">
+    <div id="sidenav-backdrop" class="closebtn" style="opacity: 0;" onclick="closeNav()">
+    </div>
+    <div id="mySidenav" class="sidenav d-flex flex-column">
+        <div id="side-logo">
+            <a href="index.html" class="navbar-brand"></a>
+        </div>
+        <a href="index.html" class="dropdown-item">
+            <span class="icon icon-home icon-xs mr-3"></span>
+            <span>Главная</span>
+        </a>
+        <a href="promotion.html" class="dropdown-item">
+            <span class="icon icon-sale icon-xs mr-3"></span>
+            <span>Акции</span>
+        </a>
+        <a href="#" class="dropdown-item mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#Address">
+            <span class="icon icon-order-primary icon-xs mr-3"></span>
+            <span>Создать новый заказ</span>
+        </a>
+        <a href="https://clearwater.ua/" class="dropdown-item">
+            <span class="icon icon-fullversion icon-xs mr-3"></span>
+            <span>Полная версия</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-cardpay icon-xs mr-3"></span>
+            <span>Оплата по номеру счета</span>
+        </a>
+        <a href="#" class="dropdown-item mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#AuthModal">
+            <span class="icon icon-login icon-xs mr-3"></span>
+            <span>Авторизация</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-bookmark icon-xs mr-3"></span>
+            <span>Создать ярлык</span>
+        </a>
+
+        <div class="language">
+            <div class="social-link">
+                <a href="#" class="text-decoration-none text-black"> Укр </a>
+            </div>
+            <div class="social-link active">
+                <a href="#" class="text-decoration-none text-black"> Рус </a>
+            </div>
+            <div class="social-link">
+                <a href="#" class="text-decoration-none text-black"> Eng </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal custom fade" id="Address" tabindex="-1">
+        <div class="modal-dialog custom modal-show-transform modal-sm">
+            <div class="modal-content custom">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">АДРЕС ДОСТАВКИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="AuthModal" tabindex="-1" data-backdrop="'static'">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">АВТОРИЗАЦИЯ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="FAQ" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ВОПРОСЫ - ОТВЕТЫ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq1.html" class="question-link">Вопросы о бутылях</a>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq2.html" class="question-link">Вопросы о воде</a>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq3.html" class="question-link">Вопросы по оборудованию</a>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq4.html" class="question-link">Вопросы по работе с сайтом</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary mat-menu-trigger2" data-bs-toggle="modal" data-bs-target="#TryForFree1">Задайте свої питання</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="CartModal" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ВЫБЕРИТЕ АДРЕС ДОСТАВКИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                                data-bs-target="#Address">Добавить адрес</button>
+                            <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                                data-bs-target="#AuthModal">Авторизоваться</button>
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal TryForFree-->
+    <div class="modal fade" id="TryForFree" tabindex="-1" data-backdrop="false">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ЗАКАЗАТЬ ПРОБНУЮ ДОСТАВКУ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <label for="inputName" class="form-label">Имя</label>
+                            <input placeholder="Ваше имя" type="text" class="form-control" id="inputName">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                            <label for="inputPhone" class="form-label">Телефон*</label>
+                            <input placeholder="(___)___-__-__" type="number" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-secondary">Отправить</button>
+                        <button type="button" class="btn btn-outline-secondary "
+                            data-bs-dismiss="modal">Отменить</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="TryForFree1" tabindex="-1" data-backdrop="true">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ЗАПИТАТИ</p>
+                    <button type="button1" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <label for="inputName" class="form-label">Ім'я</label>
+                            <input placeholder="Ваше ім'я" type="text" class="form-control" id="inputName">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                            <label for="inputPhone" class="form-label">Телефон*</label>
+                            <input placeholder="(___)___-__-__" type="number" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-4">
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input placeholder="Ваш email" type="text" class="form-control" id="inputEmail">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-5">
+                        <div class="col-12">
+                            <label for="inputQuestion" class="form-label">Запитання</label>
+                            <input placeholder="Ваше запитання" type="text" class="form-control1" id="inputQuestion">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-succes" data-bs-toggle="modal" data-bs-target="#exampleModal">Надіслати</button>
+                        <button class="btn btn-outline-danger ml-3">Скасувати</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contact -->
+    <div class="modal fade" id="Contacts" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">КОНТАКТИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/city_phone.png"><a
+                                        href="tel:0443913030">(044)391-30-30</a></li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/lifecell.png"><a href="tel:0633913030">(063)391-30-30</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/kyivstar.png"><a href="tel:0673913030">(067)391-30-30</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/mts.png"><a href="tel:0993913030">(099)391-30-30</a></li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/city_phone.png"><a
+                                        href="tel:0443913030">(044)391-30-30</a></li>
+                                <li class="list-group-item d-flex ">
+                                    <img class="list-image" src="img/contact-icon/skype.png">
+                                    <a href="skype://cw39133030?chat">skype</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/viber.png">
+                                    <a href="viber://add?number=380633913030">Viber</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                            data-bs-target="#TryForFree">Заказать звонок</button>
+                        <button type="button" class="btn btn-outline-secondary "
+                            data-bs-dismiss="modal">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Header navbar-->
+    <header class="container-fluid p-0">
+        <nav class="navbar navbar-expand h-100 w-100 bg-primary p-0">
+            <ul class="navbar-nav justify-content-between h-100 w-100">
+
+                <li class="nav-item icon icon-in-circle icon-burger icon-sm">
+                    <a role="button" class="nav-link" style="font-size:30px;cursor:pointer" onclick="openNav()"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-call icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#Contacts"
+                        aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-order icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal"
+                        data-bs-target="#CartModal" aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-ask icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#FAQ"
+                        aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <!--Main content-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <div class="zagolovok"><b>ПИТАННЯ ПРО БУТЛІ</b>
+                        </div>
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                З якого матеріалу зроблені бутелі?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Наші бутелі виготовлені з полікарбонату - міцного, хімічно нейтрального пластика. Полікарбонат не взаємодіє з водою, тому не впливає на її хімічні та смакові властивості.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Наскільки довго можуть використовуватися бутелі?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">За рекомендаціями виробників бутелів, при відсутності механічних пошкоджень і збереження відповідного зовнішнього вигляду один бутель можна використовувати приблизно 60 раз - близько 2 років. Але це стосується тільки полікарбонатних бутелів. Ми звертаємо увагу клієнтів на те, що не всі постачальники використовують такі бутелі, деякі розливають воду в більш дешеві ПET-пляшки. На перший погляд, обидва бутелі виглядають однаково. Але у використанні між полікарбонатними бутелями і ПET-бутелями є одна суттєва різниця. Якщо перші добре переносять гарячу мийку до 60 градусів (що є важливою умовою якісного виробничого процесу), то другі можна мити тільки холодною водою, тому що від гарячої води вони плавляться і втрачають форму. Крім того, через свою крихкість, ПЕТ-пляшки слугують значно менше полікарбонатних. Матеріал, з якого виготовлений бутель, завжди вказується на дні бутля. Компанія Чиста Вода ніколи не використовує ПЕТ-пляшки для розливу своєї води.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Як готуються бутелі перед розливом води? </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Всі бутелі, які повертаються до нас на завод від клієнтів, проходять серйозну обробку, перш ніж знову бути наповненими водою і переданими на доставку. Для початку ми знімаємо з них старі кришки, перевіряємо на наявність помітних зовнішніх пошкоджень, відбраковуємо потерті і старі бутелі, які втратили свій товарний вигляд. Після цього бутелі потрапляють на конвеєр, де спочатку проходять автоматичну перевірку на наявність мікротріщин, які не помітні неозброєним оком. Подібне тестування потрібно для того, щоб мінімізувати ймовірність течі бутеля надалі. Потім кожен бутель проходить мийку лужним розчином, дезінфекцію кислотним розчином і ополіскування продуктом (чистою водою з озоном). Потрібно зазначити, що весь наш процес виробництва, в тому числі і процес мийки бутелів, зафіксований в системі контролю якості ISO 9001: 2000, що гарантує 100% виконання всіх правил цього процесу для кожного бутеля, що виходить з нашого конвеєру.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFor">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFor" aria-expanded="false"
+                                aria-controls="flush-collapseFor">
+                                Чим відрізняються бутелі з ручками від бутелів без ручок?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFor" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFor" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">За рекомендаціями виробників бутелів, при відсутності механічних пошкоджень і збереження відповідного зовнішнього вигляду один бутель можна використовувати приблизно 60 раз - близько 2 років. Але це стосується тільки полікарбонатних бутелів. Ми звертаємо увагу клієнтів на те, що не всі постачальники використовують такі бутелі, деякі розливають воду в більш дешеві ПET-пляшки. На перший погляд, обидва бутелі виглядають однаково. Але у використанні між полікарбонатними бутелями і ПET-бутелями є одна суттєва різниця. Якщо перші добре переносять гарячу мийку до 60 градусів (що є важливою умовою якісного виробничого процесу), то другі можна мити тільки холодною водою, тому що від гарячої води вони плавляться і втрачають форму. Крім того, через свою крихкість, ПЕТ-пляшки слугують значно менше полікарбонатних. Матеріал, з якого виготовлений бутель, завжди вказується на дні бутля. Компанія Чиста Вода ніколи не використовує ПЕТ-пляшки для розливу своєї води.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse5" aria-expanded="false"
+                            aria-controls="flush-collapse5">
+                            Нам привезли неповний бутель, чому?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse5" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Причини можуть бути різними. З конвеєра пляшкомийної машини всі бутелі видаються наповненими та проходять ще й візуальний контроль. Теча може відбуватися під час доставки через мікротріщини в бутелі, які обумовлені ударами об різні предмети, особливо об гострі кути, при перенесенні. У звичайному стані це може бути непомітним і виявляється при натисканні на бутель, трясці, зміні температури. У деяких випадках теча може бути через кришку, в якій виявився прихований дефект, непомітний під час закупорювання. Такий бутель у жодному разі не можна ставити на кулер, так як у перевернутому бутелі повинен зберігатися вакуум. Якщо його немає, то воду ніщо не утримує в бутелі, вона починає переповнювати баки кулера і дуже швидко весь вміст бутеля виливається на підлогу.</div>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse6" aria-expanded="false"
+                            aria-controls="flush-collapse6">
+                            Що таке термоплівка і навіщо вона потрібна?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse6" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Термоплівка - це захисна плівка, яка закриває шийку бутеля. Вона є гарантією оригінальності продукту і захистом від підробки. Ще одна функція термоплівки - додатковий гігієнічний захист шийки бутеля (на шийку бутеля потрапляє менше пилу, водій торкається його руками при доставці). На плівці зображений наш товарний знак (безліч логотипів CW). Вона одягається на кожний бутель автоматично в кінці виробничого процесу. Відсутність на доставленому бутелі термоплівки має служити для клієнта приводом звернутися до нас і вимагати безкоштовної заміни продукції.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse7" aria-expanded="false"
+                        aria-controls="flush-collapse7">
+                        Чому у кришок різний колір?
+                    </button>
+                </h2>
+                <div id="flush-collapse7" class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><a>Колір кришки бутеля - це один із способів швидко розрізнити, вода якого виду налита в цей бутель:</a>
+                        
+                        
+                        <div class="accordion-body"><a>Синя - класична вода</a>
+                        </div>
+
+                        <div class="accordion-body"><a>Біла - фторована</a>
+                        </div>
+
+                        <div class="accordion-body"><a>Жовта - йодована</a>
+                        </div>
+
+
+                        
+                        
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse8" aria-expanded="false"
+                    aria-controls="flush-collapse8">
+                    Як правильно зняти кришку?
+                </button>
+            </h2>
+            <div id="flush-collapse8" class="accordion-collapse collapse"
+                aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Зняти термоплівку, розірвавши її зверху, потягнувши за червону смужку. Потягнувши за язичок на нижній частині кришки, надірвати її по видавленому контуру до верхньої потовщеної частини кришки. Взявшись рукою за надірвану частину кришки, потягнути кришку вгору до повного зняття.</div>
+            </div>
+        </div>
+    </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse9" aria-expanded="false"
+                    aria-controls="flush-collapse9">
+                    Параметри бутеля (розміри)
+                </button>
+            </h2>
+            <div id="flush-collapse9" class="accordion-collapse collapse"
+                aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="accordion-body"><a>Діаметр 27см</a>
+                    </div>
+
+                    <div class="accordion-body"><a>Висота (з горловиною) 49см, після установки на кулер 40 см</a>
+                    </div>
+
+                    <div class="accordion-body"><a>Вага порожньої тари - приблизно 800 гр.</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+           
+        </div>
+        <div class="row py-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-secondary mat-menu-trigger2 faq-btn" data-bs-toggle="modal" data-bs-target="#TryForFree1">Задайте свої питання</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript">
+        $(".carousel").swipe({
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+            },
+            allowPageScroll: "vertical"
+        });
+    </script>
+    <script>
+        let mySidenav = document.getElementById("mySidenav");
+        let backdrop = document.getElementById("sidenav-backdrop");
+        function openNav() {
+            mySidenav.style.width = "250px";
+            backdrop.style.width = "100%";
+            backdrop.style.opacity = "0.2";
+        }
+
+        function closeNav() {
+            mySidenav.style.width = "0";
+            backdrop.style.width = "0%";
+            backdrop.style.opacity = "0";
+        }
+    </script>
+</body>

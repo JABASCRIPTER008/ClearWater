@@ -1,0 +1,101 @@
+/* The side navigation menu */
+.main{
+    overflow-x: hidden;
+}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: absolute; /* Stay in place */
+  z-index: 1002; /* Stay on top */
+  top: 50px; /* Stay at the top */
+  left: 0;
+  background-color: #fff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  text-decoration: none!important;
+  transition: 0.1s;
+  border-bottom: 1px solid rgba(158,158,158,.1);
+  font-weight: 500!important;
+}
+
+#side-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2B76AF !important;
+}
+
+.navbar-brand{
+  height: 150px;
+  width: 100%;
+  display: flex;
+  background: url("../img/logo.svg") no-repeat;
+  background-size: fill;
+  background-position: center;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#sidenav-backdrop{
+  position: absolute;
+  background-color: #000;
+  width: 0%;
+  height: 100%;
+  z-index: 1001;
+  opacity: 0.2;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.sidenav-backdrop{
+  opacity: 0.2;
+  z-index: 1001;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+}
+
+.language{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: auto;
+}
+
+.language .social-link{
+  margin: 0 10px;
+  padding: 4px;
+  border: 2px solid #2B76AF;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 13pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.language .social-link .active{
+  background-color: #2B76AF;
+}
+
+.dropdown-item{
+  padding: 10px;
+}
+

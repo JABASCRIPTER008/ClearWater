@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type='image/x-icon' href="img/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Google Api-->
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/promotion.css">
+    <style>
+        #side-logo {
+            width: 100%;
+        }
+    </style>
+    <title>ClearWater</title>
+</head>
+
+<body class="col-12 col-sm-6">
+    <div id="sidenav-backdrop" class="closebtn" style="opacity: 0;" onclick="closeNav()">
+    </div>
+    <div id="mySidenav" class="sidenav d-flex flex-column">
+        <div id="side-logo">
+            <a href="index.html" class="navbar-brand"></a>
+        </div>
+        <a href="index.html" class="dropdown-item">
+            <span class="icon icon-home icon-xs mr-3"></span>
+            <span>Главная</span>
+        </a>
+        <a href="promotion.html" class="dropdown-item">
+            <span class="icon icon-sale icon-xs mr-3"></span>
+            <span>Акции</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-order-primary icon-xs mr-3"></span>
+            <span>Создать новый заказ</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-fullversion icon-xs mr-3"></span>
+            <span>Полная версия</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-cardpay icon-xs mr-3"></span>
+            <span>Оплата по номеру счета</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-login icon-xs mr-3"></span>
+            <span>Авторизация</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-bookmark icon-xs mr-3"></span>
+            <span>Создать ярлык</span>
+        </a>
+
+        <div class="language">
+            <div class="social-link">
+                <a href="#" class="text-decoration-none text-black"> Укр </a>
+            </div>
+            <div class="social-link active">
+                <a href="#" class="text-decoration-none text-black"> Рус </a>
+            </div>
+            <div class="social-link">
+                <a href="#" class="text-decoration-none text-black"> Eng </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal custom fade" id="Address" tabindex="-1">
+        <div class="modal-dialog custom modal-show-transform modal-sm">
+            <div class="modal-content custom">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">АДРЕС ДОСТАВКИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="AuthModal" tabindex="-1" data-backdrop="'static'">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">АВТОРИЗАЦИЯ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="FAQ" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ВОПРОСЫ - ОТВЕТЫ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="CartModal" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ВЫБЕРИТЕ АДРЕС ДОСТАВКИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                                data-bs-target="#Address">Добавить адрес</button>
+                            <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                                data-bs-target="#AuthModal">Авторизоваться</button>
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal TryForFree-->
+    <div class="modal fade" id="TryForFree" tabindex="-1" data-backdrop="false">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ЗАКАЗАТЬ ПРОБНУЮ ДОСТАВКУ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <label for="inputName" class="form-label">Имя</label>
+                            <input placeholder="Ваше имя" type="text" class="form-control" id="inputName">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                            <label for="inputPhone" class="form-label">Телефон*</label>
+                            <input placeholder="(___)___-__-__" type="number" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-secondary">Отправить</button>
+                        <button type="button" class="btn btn-outline-secondary "
+                            data-bs-dismiss="modal">Отменить</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contact -->
+    <div class="modal fade" id="Contacts" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">КОНТАКТИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/city_phone.png"><a
+                                        href="tel:0443913030">(044)391-30-30</a></li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/lifecell.png"><a href="tel:0633913030">(063)391-30-30</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/kyivstar.png"><a href="tel:0673913030">(067)391-30-30</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/mts.png"><a href="tel:0993913030">(099)391-30-30</a></li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/city_phone.png"><a
+                                        href="tel:0443913030">(044)391-30-30</a></li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/skype.png"><a href="skype:cw39133030?chat"></a>skype</li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/viber.png"><a
+                                        href="viber://add?number=380633913030">Viber</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                            data-bs-target="#TryForFree">Заказать звонок</button>
+                        <button type="button" class="btn btn-outline-secondary "
+                            data-bs-dismiss="modal">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header navbar-->
+    <header class="container-fluid p-0">
+        <nav class="navbar navbar-expand h-100 w-100 bg-primary p-0">
+            <ul class="navbar-nav justify-content-between h-100 w-100">
+
+                <li class="nav-item icon icon-in-circle icon-burger icon-sm">
+                    <a role="button" class="nav-link" style="font-size:30px;cursor:pointer" onclick="openNav()"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-call icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#Contacts"
+                        aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-order icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal"
+                        data-bs-target="#CartModal" aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-ask icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#FAQ"
+                        aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <!--Main content-->
+    <div class="static-bar d-flex justify-content-around">
+        <div class="col-md-6">
+            <span class="text-dark" style="text-transform: uppercase;">Акции</span>
+        </div>
+        <div class="tab col-md-6">
+            <a class="tab-link icon icon-arrow-left" href="#" onclick="prevSlide()"></a>
+            <span class="font-weight-bold" id="currentSlide">1/6</span>
+            <a class="tab-link icon icon-arrow-right" href="#" onclick="nextSlide()"></a>
+        </div>
+    </div>
+    <div class="container-fluid d-flex" id="promotion">
+        <div id="prom-1" class="prom-item active">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="prom-img" src="img/banner1.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="font-md text-uppercase font-weight-bold pt-3">.</p>
+                    <p class="smaller">До конца ноября закажите 3 бутыли воды CLEARWATER и получите помпу в подарок!
+                        Всего 228 грн* = 3 бутыли воды CLEARWATER на выбор (классическая, йодированная или
+                        фторированная) + помпа. <br>Акция действует только для новых клиентов. <br>
+                        <small>*Дополнительно оплачивается залоговая стоимость за бутыль 180 грн., которая возвращается
+                            Вам по окончании сотрудничества. <br>Акция не суммируется с "водой на пробу" и "2 бутыли в
+                            подарок".</small>
+                    </p>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-9 d-flex justify-content-end">
+                        <small class="text-left">
+                            Уважаемый клиент! Если Вам приходится каждый раз авторизовываться заново, смотрите
+                            <a href="https://m.clearwater.ua/ru/#/faq/3">здесь</a>
+                        </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="prom-2" class="prom-item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="prom-img" src="img/banner2.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="font-md text-uppercase font-weight-bold pt-3">.</p>
+                    <p class="smaller">Если вам нравится CLEARWATER и наш сервис, порекомендуйте нас школе (классу) или
+                        детсаду, которые еще не заказывают доставку CLEARWATER. После того, как они сделают первый
+                        заказ, назвав ваше имя, Вы получите 2 бутыли CLEARWATER в подарок!</p>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-9 d-flex justify-content-end">
+                        <small class="text-left">
+                            Уважаемый клиент! Если Вам приходится каждый раз авторизовываться заново, смотрите
+                            <a href="https://m.clearwater.ua/ru/#/faq/3">здесь</a>
+                        </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="prom-3" class="prom-item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="prom-img" src="img/banner3.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="font-md text-uppercase font-weight-bold pt-3">Заказывай онлайн - получай подарки!</p>
+                    <p _ngcontent-owp-c0="" class="smaller">С 01 по 30 ноября сделайте заказ <a
+                            href="https://m.clearwater.ua/#/add-address/">online</a> и примите участие в розыгрыше.<br>
+                        Победители получат: <br> 1 место аренда кулера на 2 мес. или 4 бутыли воды;<br> 2 место помпа в
+                        подарок или 2 бутыли воды;<br> 3 место бесплатная санобработка или 1 бутыль воды.<br> Победители
+                        будут определены до 10 декабря при помощи random.org. Результаты будут опубликованы на нашей
+                        страничке в <a href="https://www.facebook.com/clearwaterua">Facebook</a>.<br> Пусть повезет
+                        именно вам!</p>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-9 d-flex justify-content-end">
+                        <small class="text-left">
+                            Уважаемый клиент! Если Вам приходится каждый раз авторизовываться заново, смотрите
+                            <a href="https://m.clearwater.ua/ru/#/faq/3">здесь</a>
+                        </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="prom-4" class="prom-item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="prom-img" src="img/banner4.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="font-md text-uppercase font-weight-bold pt-3">2 БУТЫЛИ В ПОДАРОК</p>
+                    <p class="smaller">Сделайте свой первый заказ до 30 ноября и гарантированно получите 2 бутыли воды в
+                        подарок. Акция действует только для новых клиентов. <br><small>Предложение не суммируется с
+                            акцией "Помпа в подарок", "Вода на пробу".</small></p>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-9 d-flex justify-content-end">
+                        <small class="text-left">
+                            Уважаемый клиент! Если Вам приходится каждый раз авторизовываться заново, смотрите
+                            <a href="https://m.clearwater.ua/ru/#/faq/3">здесь</a>
+                        </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="prom-5" class="prom-item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="prom-img" src="img/banner5.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="font-md text-uppercase font-weight-bold pt-3">ТОВАР НЕДЕЛИ!</p>
+                    <p class="smaller">Только до 30 ноября купите чай Lovare в ассортименте со скидкой 10%.</p>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-9 d-flex justify-content-end">
+                        <small class="text-left">
+                            Уважаемый клиент! Если Вам приходится каждый раз авторизовываться заново, смотрите
+                            <a href="https://m.clearwater.ua/ru/#/faq/3">здесь</a>
+                        </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="prom-6" class="prom-item">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="prom-img" src="img/banner6.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="font-md text-uppercase font-weight-bold pt-3">Приводи друзей - выбирай подарки!</p>
+                    <p class="smaller">Если Вам нравится CLEARWATER и наш сервис, порекомендуйте нас своим друзьям,
+                        которые еще не заказывают CLEARWATER. После того, как ваш друг сделает первый платный заказ,
+                        назвав ваше имя, <a href="https://m.clearwater.ua/friends">выбирайте подарок!</a><br><br>
+                        <font size="1">
+                            <div><img width="100%" src="img/FR_1.png"><a
+                                    href="https://gannapro.com/rushnyky-z-microfibry/?utm_source=clearwater&amp;utm_medium=site&amp;utm_campaign=promo10"><img
+                                        width="100%" src="img/FR_2_1.png"></a><img width="100%" src="img/FR_3.png"><a
+                                    href="./Official rules of the Promotion.pdf"><img width="100%" src="img/FR_4.png"></a>
+                            </div>
+                        </font>
+                    <p> <br><br><br></p>
+                    </p>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-9 d-flex justify-content-end">
+                        <small class="text-left">
+                            Уважаемый клиент! Если Вам приходится каждый раз авторизовываться заново, смотрите
+                            <a href="https://m.clearwater.ua/ru/#/faq/3">здесь</a>
+                        </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript">
+        $(".carousel").swipe({
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+            },
+            allowPageScroll: "vertical"
+        });
+    </script>
+    <script>
+        let mySidenav = document.getElementById("mySidenav");
+        let backdrop = document.getElementById("sidenav-backdrop");
+        function openNav() {
+            mySidenav.style.width = "250px";
+            backdrop.style.width = "100%";
+            backdrop.style.opacity = "0.2";
+        }
+
+        function closeNav() {
+            mySidenav.style.width = "0";
+            backdrop.style.width = "0%";
+            backdrop.style.opacity = "0";
+        }
+    </script>
+    <script src="js/promotion.js"></script>
+</body>

@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type='image/x-icon' href="img/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Google Api-->
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/promotion.css">
+    <style>
+        #side-logo {
+            width: 100%;
+        }
+    </style>
+    <title>ClearWater</title>
+</head>
+
+<body class="col-12 col-sm-6">
+    <div id="sidenav-backdrop" class="closebtn" style="opacity: 0;" onclick="closeNav()">
+    </div>
+    <div id="mySidenav" class="sidenav d-flex flex-column">
+        <div id="side-logo">
+            <a href="index.html" class="navbar-brand"></a>
+        </div>
+        <a href="index.html" class="dropdown-item">
+            <span class="icon icon-home icon-xs mr-3"></span>
+            <span>Главная</span>
+        </a>
+        <a href="promotion.html" class="dropdown-item">
+            <span class="icon icon-sale icon-xs mr-3"></span>
+            <span>Акции</span>
+        </a>
+        <a href="#" class="dropdown-item mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#Address">
+            <span class="icon icon-order-primary icon-xs mr-3"></span>
+            <span>Создать новый заказ</span>
+        </a>
+        <a href="https://clearwater.ua/" class="dropdown-item">
+            <span class="icon icon-fullversion icon-xs mr-3"></span>
+            <span>Полная версия</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-cardpay icon-xs mr-3"></span>
+            <span>Оплата по номеру счета</span>
+        </a>
+        <a href="#" class="dropdown-item mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#AuthModal">
+            <span class="icon icon-login icon-xs mr-3"></span>
+            <span>Авторизация</span>
+        </a>
+        <a href="#" class="dropdown-item">
+            <span class="icon icon-bookmark icon-xs mr-3"></span>
+            <span>Создать ярлык</span>
+        </a>
+
+        <div class="language">
+            <div class="social-link">
+                <a href="#" class="text-decoration-none text-black"> Укр </a>
+            </div>
+            <div class="social-link active">
+                <a href="#" class="text-decoration-none text-black"> Рус </a>
+            </div>
+            <div class="social-link">
+                <a href="#" class="text-decoration-none text-black"> Eng </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal custom fade" id="Address" tabindex="-1">
+        <div class="modal-dialog custom modal-show-transform modal-sm">
+            <div class="modal-content custom">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">АДРЕС ДОСТАВКИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="AuthModal" tabindex="-1" data-backdrop="'static'">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">АВТОРИЗАЦИЯ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="FAQ" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ВОПРОСЫ - ОТВЕТЫ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq1.html" class="question-link">Вопросы о бутылях</a>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq2.html" class="question-link">Вопросы о воде</a>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq3.html" class="question-link">Вопросы по оборудованию</a>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="icon icon-md icon-question"></span>
+                                    <a href="faq4.html" class="question-link">Вопросы по работе с сайтом</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary mat-menu-trigger2" data-bs-toggle="modal" data-bs-target="#TryForFree1">Задайте свої питання</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="CartModal" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ВЫБЕРИТЕ АДРЕС ДОСТАВКИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                                data-bs-target="#Address">Добавить адрес</button>
+                            <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                                data-bs-target="#AuthModal">Авторизоваться</button>
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal TryForFree-->
+    <div class="modal fade" id="TryForFree" tabindex="-1" data-backdrop="false">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ЗАКАЗАТЬ ПРОБНУЮ ДОСТАВКУ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <label for="inputName" class="form-label">Имя</label>
+                            <input placeholder="Ваше имя" type="text" class="form-control" id="inputName">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                            <label for="inputPhone" class="form-label">Телефон*</label>
+                            <input placeholder="(___)___-__-__" type="number" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-secondary">Отправить</button>
+                        <button type="button" class="btn btn-outline-secondary "
+                            data-bs-dismiss="modal">Отменить</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="TryForFree1" tabindex="-1" data-backdrop="true">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">ЗАПИТАТИ</p>
+                    <button type="button1" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <label for="inputName" class="form-label">Ім'я</label>
+                            <input placeholder="Ваше ім'я" type="text" class="form-control" id="inputName">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-3">
+                        <div class="col-12">
+                            <label for="inputPhone" class="form-label">Телефон*</label>
+                            <input placeholder="(___)___-__-__" type="number" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-4">
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input placeholder="Ваш email" type="text" class="form-control" id="inputEmail">
+                        </div>
+                    </div>
+                    <div class="row p-2 mb-5">
+                        <div class="col-12">
+                            <label for="inputQuestion" class="form-label">Запитання</label>
+                            <input placeholder="Ваше запитання" type="text" class="form-control1" id="inputQuestion">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-succes" data-bs-toggle="modal" data-bs-target="#exampleModal">Надіслати</button>
+                        <button class="btn btn-outline-danger ml-3">Скасувати</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contact -->
+    <div class="modal fade" id="Contacts" tabindex="-1">
+        <div class="modal-dialog modal-show-transform modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <p class="modal-title m-auto">КОНТАКТИ</p>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row p-2">
+                        <div class="col-12">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/city_phone.png"><a
+                                        href="tel:0443913030">(044)391-30-30</a></li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/lifecell.png"><a href="tel:0633913030">(063)391-30-30</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/kyivstar.png"><a href="tel:0673913030">(067)391-30-30</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/mts.png"><a href="tel:0993913030">(099)391-30-30</a></li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/city_phone.png"><a
+                                        href="tel:0443913030">(044)391-30-30</a></li>
+                                <li class="list-group-item d-flex ">
+                                    <img class="list-image" src="img/contact-icon/skype.png">
+                                    <a href="skype://cw39133030?chat">skype</a>
+                                </li>
+                                <li class="list-group-item d-flex "><img class="list-image"
+                                        src="img/contact-icon/viber.png">
+                                    <a href="viber://add?number=380633913030">Viber</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary mat-menu-trigger" data-bs-toggle="modal"
+                            data-bs-target="#TryForFree">Заказать звонок</button>
+                        <button type="button" class="btn btn-outline-secondary "
+                            data-bs-dismiss="modal">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Header navbar-->
+    <header class="container-fluid p-0">
+        <nav class="navbar navbar-expand h-100 w-100 bg-primary p-0">
+            <ul class="navbar-nav justify-content-between h-100 w-100">
+
+                <li class="nav-item icon icon-in-circle icon-burger icon-sm">
+                    <a role="button" class="nav-link" style="font-size:30px;cursor:pointer" onclick="openNav()"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-call icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#Contacts"
+                        aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-order icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal"
+                        data-bs-target="#CartModal" aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+                <li class="nav-item icon icon-in-circle icon-ask icon-sm">
+                    <a role="button" class="nav-link mat-menu-trigger" data-bs-toggle="modal" data-bs-target="#FAQ"
+                        aria-haspopup="true" ng-reflect-menu="[object Object]"></a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <!--Main content-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+              
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <div class="zagolovok"><b>ПИТАННЯ ПРО ВОДУ</b>
+                        </div>
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Яка у вас вода?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Чиста вода - це високоякісна вода, отримана шляхом глибокого очищення артезіанської води з використанням сучасних мембранних технологій, мінералізована солями вищої очистки. При такому методі вода повністю очищується від будь-яких забруднюючих її речовин, якими уражені практично всі джерела питної води, у тому числі й артезіанські. Це - результат всезростаючого погіршення екологічної ситуації, великої кількості свердловин, через які і проникає у глибинні шари все, що знаходиться на поверхні. Мінералізація необхідна, тому що разом з непотрібними речовинами з води видаляється і частина корисних мінералів, які і відновлюються. Використовується для пиття в сирому вигляді, для приготування чаю, кави, їжі та інших напоїв. При цьому, з огляду на чистоту і малий вміст солей, максимально зберігається смак чаю, кави і будь-яких складових їжі.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Розкажіть про систему очищення води? Які фільтри використовуються при очищенні?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Вода зі свердловини спочатку обробляється ультрафіолетом для її знезараження. Потім проходить ряд окремих фільтрів, де з води видаляються залізо, марганець, сірководень, солі, що дають накип. У кінцевому підсумку вода проходить через мембранний фільтр, де відбувається остаточне глибоке очищення на молекулярному рівні - затримуються всілякі забруднення, органічні, токсичні речовини, важкі метали, залишки бактерій, вірусів. В результаті забезпечується гарантоване очищення води від будь-яких забруднень.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Чим відрізняється звичайна, йодована або фторована вода? </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Звичайна вода містить фізіологічно необхідні макроелементи - кальцій, магній, калій, натрій, хлориди, бікарбонати в мінімальних кількостях відповідно до санітарно-гігієнічних вимог. Мінімальні кількості додаються тому, що люди більше страждають від відкладення солей, ніж від їх надлишку. Йодована вода має той самий склад, тільки додана сіль йоду. Фторована вода така ж, як і класична, тільки додана сіль фтору.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse4" aria-expanded="false"
+                                aria-controls="flush-collapse4">
+                                Чи є у вас дистильована вода? </button>
+                        </h2>
+                        <div id="flush-collapse4" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Ні, немає. Але є демінералізована вода. Вона відрізняється від дистильованої більшим вмістом мінералів. Демінералізована вода отримана шляхом подвійної фільтрації через мембранний фільтр (зворотний осмос) і відповідає ТУ 6709-72 на демінераізовану воду.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse5" aria-expanded="false"
+                                aria-controls="flush-collapse5">
+                                Для чого корисна йодована і фторовна вода? </button>
+                        </h2>
+                        <div id="flush-collapse5" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Кількість йоду в навколишньому середовищі обумовлена ??віддаленістю території від морів. Україна у Центральній і Північній частині відноситься до місцевості з деяким дефіцитом йоду в природних джерелах (продукти харчування, вода). Крім того, в умовах підвищених ризиків потрапляння в організм людини радіоактивного йоду, вживання звичайного йоду призводить до витіснення і заміни радіоактивного йоду на звичайний. В основному, це стосується щитовидної залози. Вживання йодованої води є ефективною профілактикою йодного дефіциту і очищенням від радіоактивного йоду. Дефіцит йоду викликає захворювання щитовидної залози у дорослих і відставання у розвитку дітей. За даними медичних джерел, біологічна роль фтору пов'язана головним чином з його участю в кісткоутворенні, формуванні самого зуба (дентину) і зубної емалі. Достатнє споживання фтору необхідно для запобігання карієсу зубів. Фтор єдиний мінерал, який поставляється в організм в основному, 90% з питною водою. У їжі його практично немає, окрім чаю та морепродуктів.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse6" aria-expanded="false"
+                                aria-controls="flush-collapse6">
+                                Які протипоказання для йодованої та фторованої води? </button>
+                        </h2>
+                        <div id="flush-collapse6" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Якщо Ви приймаєте таблетки з йодом (при хворобах щитовидної залози) або фтором (з метою профілактики карієсу), то додатково пити йодовану і фторовану воду не варто, у зв'язку із небезпекою передозування. В інших випадках - протипоказань немає. Навпаки, йодована вода - корисна для щитовидної залози, а фториована вода - допомагає протистояти карієсу.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse7" aria-expanded="false"
+                                aria-controls="flush-collapse7">
+                                Чим ваша вода відрізняється від ...? </button>
+                        </h2>
+                        <div id="flush-collapse7" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Вода високого ступеня очистки не містить бактерій, шкідливих хімічних та органічних елементів. Ми застосовуємо найсучасніші технології очищення і знезараження. У нашій води високі смакові якості. Наша лабораторія проводить постійний контроль якості на всіх етапах очистки, мінералізації і розливу води. Склад води стабільний і не залежить від сезонності.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse8" aria-expanded="false"
+                                aria-controls="flush-collapse8">
+                                Де знаходиться ваше виробництво? </button>
+                        </h2>
+                        <div id="flush-collapse8" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Виробничі потужності і свердловина знаходяться за адресою Київська область, Києво-Святошинський район, с. Мила, вул. Комарова, 23-б. Це знаходиться на Заході від Києва. Місцевість характерна тим, що вище за напрямком руху підземних вод на сотні кілометрів немає жодних забруднюючих грунт виробництв. Тому забрудненість відходами діяльності людини мінімальна.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse9" aria-expanded="false"
+                                aria-controls="flush-collapse9">
+                                Який термін зберігання води? </button>
+                        </h2>
+                        <div id="flush-collapse9" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Термін зберігання 3 місяці.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse10" aria-expanded="false"
+                                aria-controls="flush-collapse10">
+                                Яка глибина свердловини? </button>
+                        </h2>
+                        <div id="flush-collapse10" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Забір води здійснюється з глибини 130 метрів з Сеноманського горизонту.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse11" aria-expanded="false"
+                                aria-controls="flush-collapse11">
+                                Що таке зворотній осмос? </button>
+                        </h2>
+                        <div id="flush-collapse11" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading11" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Фільтр, що працює за принципом зворотнього осмосу, влаштований досить просто: основний елемент, що дозволяє отримувати воду високого ступеня очищення - це тонкоплівкова мембрана. Якщо пояснювати дуже спрощено, то вона являє собою щось на кшталт сітки, розмір осередків якої можна порівняти із розміром молекули води. Осередки виходять шляхом лазерної обробки. Зрозуміло, крізь таку "сітку" можуть пройти або самі молекули води, або речовини, розмір молекул яких ще менший - розчинений у воді кисень, водень і т.п. В результаті чого з води віддаляються практично всі розчинені компоненти, а також солі важких металів, органічні домішки і бактерії. Зворотний осмос використовується в різних технологіях очищення води від домішок, в тому числі для опріснення води і очищення питної води для різних цілей з початку 1970-х років.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse12" aria-expanded="false"
+                                aria-controls="flush-collapse12">
+                                Чим ви консервуєте воду? </button>
+                        </h2>
+                        <div id="flush-collapse12" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading12" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Воду ми не консервуємо. Довге зберігання нашої води забезпечується високим ступенем очистки від бактерій, мікроорганізмів та органічних сполук. Крім того, при розливі води у бутлі проводиться знезараження - як води, так і бутлів, пробок - озоном. Озон, через 6-10 годин, в залежності від температури, перетворюється в звичайний кисень. Це призводить ще й до додаткового насичення води киснем.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse13" aria-expanded="false"
+                                aria-controls="flush-collapse13">
+                                Який склад води? Мінералізація? </button>
+                        </h2>
+                        <div id="flush-collapse13" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading13" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Мінералізація нашої води близько 100 мг / літр (загальний солевміст). У іонний склад води входять кальцій, магній, натрій, калій, бікарбонати, хлориди, фтор та йод.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse14" aria-expanded="false"
+                                aria-controls="flush-collapse14">
+                                Де ви берете мінерали? У якому вигляді? </button>
+                        </h2>
+                        <div id="flush-collapse14" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading14" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Мінерали нам поставляють з Європи, в основному з Німеччині. Використовуються мінеральні солі найвищого ступеня очищення, де основна речовина становить від 99,8 до 100%. На вигляд це кристали, що нагадують звичайну кухонну сіль.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse15" aria-expanded="false"
+                                aria-controls="flush-collapse15">
+                                Чи можна пити воду: дітям, вагітним жінкам, людям з ярізними захворюваннями? </button>
+                        </h2>
+                        <div id="flush-collapse15" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading15" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Завдяки збалансованому мінеральному складу, CLEARWATER можна пити без обмежень, у будь-якому віці, у тому числі й вагітним жінкам. Людям із захворюваннями лікарі, зазвичай, рекомендують вживати менше солей, тому наш продукт може бути рекомендований їм, так як в ньому мало солей.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse16" aria-expanded="false"
+                                aria-controls="flush-collapse16">
+                                Чи може ваш водій набрати воду у бюветі? </button>
+                        </h2>
+                        <div id="flush-collapse16" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading16" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Всі бутлі закриті фірмовою пробкою з нанесеною датою і часом розливу, яку не можна зняти, не пошкодивши. Нанесення дати проводиться принтером, підробити який вручну неможливо. Зверху пробка закрита фірмовою термоусадочною плівкою, що так само є захистом від розкриття бутлі з фірмовою водою. З цієї причини, при збереженні цілісності заводської упаковки, наявності написів, налити в бутель НЕ фірмову воду неможливо! При наявності зазначених ступенів захисту можна бути впевненими, що це оригінальна CLEARWATER. Крім того, водіям суворо заборонено навіть наближатися до бюветів - щоб уникнути непорозумінь. Для цього ми контролюємо пересування наших водіїв за допомогою GPS.
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse17" aria-expanded="false"
+                                aria-controls="flush-collapse17">
+                                Які організації перевіряють якість вашої води? </button>
+                        </h2>
+                        <div id="flush-collapse17" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading17" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Києво-Святошинська районна СЕС, обласна СЕС, інститут екології та токсикології імені Л.І.Медведя, Укрметртестстандарт, інститут колоїдної хімії та хімії води ім. Думанського
+                              
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary mat-menu-trigger2" data-bs-toggle="modal" data-bs-target="#TryForFree1">Задайте свої питання</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            
+                        <small class="text-center">
+                            Шановні клієнти! Якщо Вам доводиться кожного разу авторизуватись наново, дивіться
+                            <a href="https://m.clearwater.ua/ru/#/faq/3">тут</a>
+                        </small>
+              
+                
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript">
+        $(".carousel").swipe({
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+            },
+            allowPageScroll: "vertical"
+        });
+    </script>
+    <script>
+        let mySidenav = document.getElementById("mySidenav");
+        let backdrop = document.getElementById("sidenav-backdrop");
+        function openNav() {
+            mySidenav.style.width = "250px";
+            backdrop.style.width = "100%";
+            backdrop.style.opacity = "0.2";
+        }
+
+        function closeNav() {
+            mySidenav.style.width = "0";
+            backdrop.style.width = "0%";
+            backdrop.style.opacity = "0";
+        }
+    </script>
+</body>

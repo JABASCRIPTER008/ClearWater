@@ -1,0 +1,84 @@
+.icon{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-facebook{
+    background-image: url(../img/facebook.svg);
+    border-color: #00386E!important;
+}
+.icon-call{
+    background-image: url(../img/call.svg);
+}
+.icon-burger{
+    background-image: url(../img/burger.svg);
+}
+.icon-ask{
+    background-image: url(../img/ask.svg);
+}
+.icon-order{
+    background-image: url(../img/order.svg);
+}
+.icon-sale{
+    background-image: url(../img/sidebar-icon/sale.svg);
+}
+    /*Sidebar Icons*/
+.icon-home{
+    background-image:  url(../img/sidebar-icon/home.svg);
+}
+.icon-order-primary{
+    background-image:  url(../img/sidebar-icon/order-primary.svg);
+}
+.icon-fullversion{
+    background-image:  url(../img/sidebar-icon/fule_version.svg);
+}
+.icon-cardpay{
+    background-image:  url(../img/sidebar-icon/cardpay.svg);
+}
+.icon-login{
+    background-image:  url(../img/sidebar-icon/login.svg);
+}
+.icon-bookmark{
+    background-image:  url(../img/sidebar-icon/bookmark.svg);
+}
+.icon-arrow-left{
+    background-image:  url(../img/arrow-left.svg);
+}
+.icon-arrow-right{
+    background-image:  url(../img/arrow-right.svg);
+}
+.icon-question{
+    background-image: url(../img/question.svg);
+}
+.icon-close, .btn-close{
+    background-image: url(../img/close.svg);
+    opacity: 1;
+}
+
+.icon-in-circle {
+    background-size: 65% 65%;
+    border: 2px solid #fff;
+    border-radius: 50% !important;
+}
+
+.icon-sm, .navbar .nav-item{
+    width: 35px;
+    height: 34px;
+    min-width: 35px;
+}
+
+.icon-xs{
+    width: 24px;
+    height: 24px;
+}
+
+.icon-md{
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+}
+
+.icon-size-contain{
+    background-size: contain;
+}

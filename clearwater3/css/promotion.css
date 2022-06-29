@@ -1,0 +1,18 @@
+#promotion{
+    height: 560px;
+    padding-top: 30px;
+    position: relative;
+}
+.prom-item{
+    position: absolute;
+    display: none;
+    opacity: 0;
+}
+.prom-img{
+    width: inherit;
+
+}
+.active{
+    display: block;
+    opacity: 1;
+}
